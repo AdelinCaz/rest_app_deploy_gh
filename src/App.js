@@ -5,11 +5,13 @@ import {BrowserRouter} from "react-router-dom"
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 import {GiKnifeFork} from "react-icons/gi";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <div className="container-app">
         <Nav>
           <GiKnifeFork/>
           <Logo to={"/"}>Restaurant</Logo>
@@ -17,6 +19,8 @@ function App() {
       <Search/>
       <Category/>
       <Pages/>
+      </div>
+      <Footer/>
       </BrowserRouter>
     </div>
   );
