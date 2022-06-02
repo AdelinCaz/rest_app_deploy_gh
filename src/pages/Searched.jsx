@@ -14,7 +14,7 @@ function Searched() {
         const data = await fetch(`https://www.themealdb.com/api/json/v2/9973533/filter.php?i=${name}`);
         const recipes = await data.json();
         setSearchedRecipe(recipes.meals);
-        console.log(searchedRecipes);
+        console.log(recipes);
         
     };
     useEffect(()=>{
@@ -24,7 +24,7 @@ function Searched() {
 
   return (
       <Grid>
-          {searchedRecipes.map((item) => {
+          {searchedRecipes ? ( searchedRecipes.map((item) => {
               return (
                   <Card key={item.idMeal}>
                       <Link to={"/recipe/" + item.idMeal}>
@@ -33,7 +33,8 @@ function Searched() {
                       </Link>
                   </Card>
               )
-          })};
+          })) : <Notfound ><h3>Ingredient Not Found! :( </h3></Notfound >  }
+          
       </Grid>
   )
 };
@@ -45,9 +46,11 @@ const Grid = styled.div`
     grid-gap: 3rem;
 `;
 const Card = styled.div`
+    
     img{
         width: 100%;
-        border-radius: 2rem;
+        border-radius: 5px;
+        border: 1px solid grey;
     }
     a{
         text-decoration: none;
@@ -55,6 +58,13 @@ const Card = styled.div`
     h4{
         text-align:center;
         padding: 1rem;
+    }
+`
+const Notfound = styled.div`
+    margin:0 auto;
+    h3{
+        font-weight: 600;
+        font-size: 25px;
     }
 `
 export default Searched;

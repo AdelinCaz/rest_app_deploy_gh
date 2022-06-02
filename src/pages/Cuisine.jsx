@@ -46,7 +46,8 @@ const Grid= styled.div`
 const Card = styled.div`
     img{
         width: 100%;
-        border-radius: 2rem;
+        border-radius: 5px;
+        border: 1px solid grey;
     }
     a{
         text-decoration: none;

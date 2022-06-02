@@ -103,6 +103,8 @@ const DetailWrapper = styled.div`
   img{
     width:370px;
     height:320px;
+    border: 1px solid grey;
+    border-radius: 5px;
   }
   .active{
     background: linear-gradient(35deg, #494949, #313131);

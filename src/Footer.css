@@ -15,11 +15,11 @@ footer{
 }
 p{
     width: 70%;
-    text-align: center;
+    /* text-align: center; */
     padding: 0px 40px;
     font-size: 13px;
 }
-.services{
+.social{
     
     flex-grow: 1;
     flex-basis: 70%;
@@ -39,7 +39,7 @@ p{
 }
 .container{
     display: flex; 
-    padding: 50px 20px;
+    padding: 100px 20px;
 }
 .container h3{
     margin-bottom: 20px;
@@ -54,6 +54,6 @@ p{
 .container svg{
     width: 40px;
     height: 40px;
-    margin-left: 20px;
+    margin-left: 45px;
     cursor: pointer;
 }

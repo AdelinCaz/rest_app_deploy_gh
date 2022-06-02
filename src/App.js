@@ -14,7 +14,7 @@ function App() {
       <div className="container-app">
         <Nav>
           <GiKnifeFork/>
-          <Logo to={"/"}>Restaurant</Logo>
+            <Logo to={"/rest_app_deploy_gh"}>Restaurant</Logo>
         </Nav>
       <Search/>
       <Category/>

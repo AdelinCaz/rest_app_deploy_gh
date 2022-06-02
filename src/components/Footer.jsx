@@ -16,8 +16,8 @@ function Footer() {
                     aperiam quam! Earum neque fuga sapiente voluptates, 
                     molestias sunt itaque?</p>
             </div>
-            <div className='services'>
-                <h3>Services</h3>
+            <div className='social'>
+                <h3>Social Media</h3>
                   <AiOutlineFacebook/>
                   <FiTwitter/>
             </div>

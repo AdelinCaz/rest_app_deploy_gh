@@ -53,12 +53,14 @@ function Popular() {
 
 const Wrapper = styled.div`
     margin: 4rem 0rem;
+    
 `;
 
 const Card = styled.div`
     min-height: 20rem;
-    border-radius: 2rem;
+    border-radius: 5px;
     position: relative;
+    border: 1px solid grey;
  
     img {
     width:370px;
@@ -69,6 +71,7 @@ const Card = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
 }
     p{
         position: absolute;
@@ -93,8 +96,10 @@ const Card = styled.div`
 const Gradient = styled.div`
     z-index: 3;
     position: absolute;
+    border-radius:5px;
     width: 100%;
     height: 100%;
+    
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
 `;
 
