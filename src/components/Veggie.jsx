@@ -23,11 +23,11 @@ function Veggie() {
         <Wrapper>
             <h4>Veggie Picks</h4>
             <Splide options={{
-                perPage: 3,
+                perPage: 2,
                 arrows: false,
                 pagination: false,
                 drag: "free",
-                gap: "1rem"
+                gap: "0rem"
 
             }}>
                 {
@@ -56,7 +56,7 @@ const Wrapper = styled.div`
 `;
 
 const Card = styled.div`
-    min-height: 20rem;
+    min-height: 25rem;
     min-width: 15rem;
     border-radius: 5px;
     position: relative;

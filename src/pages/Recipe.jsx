@@ -23,7 +23,7 @@ fetchDetails(name);
   return (
           
             <DetailWrapper >
-                <div>
+                <div className='wrapper'>
                   <h2>{item.strMeal}</h2>
                   <div className='img-container'>
                     <img src={item.strMealThumb} alt="" />
@@ -39,7 +39,7 @@ fetchDetails(name);
                    </Button>
                   </div>
                   {activeTab === "instructions" && (
-                  <div>
+                  <div className='info-text-div'>
                        <h3>{item.strInstructions}</h3>
                   </div>
         )}
@@ -106,8 +106,16 @@ const DetailWrapper = styled.div`
   margin-bottom: 5rem;
   display: flex;
 
+  .wrapper{
+    margin: 0 auto;
+  }
+
   @media (max-width: 560px) {
     flex-direction: column;
+    margin: 0 auto;
+    h2{
+      margin-left: 3rem;
+    }
   }
 
   .img-container{
@@ -130,10 +138,12 @@ const DetailWrapper = styled.div`
   h2{
     margin-bottom: 2rem;
   }
+
   li{
     font-size: 1.2rem;
     line-height: 2.5rem;
   }
+
   ul{
     margin-top: 2rem;
   }
@@ -162,9 +172,15 @@ const Button = styled.button`
   
 
 const Info = styled.div`
-  margin-left: 10rem;
+  margin-left: 5rem;
   width: 100%;
-
+  .info-text-div{
+    margin-right: 0px;
+  }
+  h3{
+    margin-top: 5rem;
+    padding: 0px;
+  }
   .button-wrapper{
     @media( max-width: 1152px) {
     width: 100%;

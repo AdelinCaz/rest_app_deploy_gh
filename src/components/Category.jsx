@@ -48,6 +48,10 @@ const SLink = styled(NavLink)`
     height: 6rem;
     cursor: pointer;
     transform: scale(0.8);
+    @media (max-width: 488px) {
+        width: 4rem;
+        height: 4rem;
+    }
     
         
     
@@ -55,6 +59,10 @@ const SLink = styled(NavLink)`
         color: white;
         font-size: 0.9rem;
         margin-top: 0.3rem;
+        @media (max-width: 488px) {
+        font-size: 0.5rem;
+    }
+
     }
     svg{
         color: white;
