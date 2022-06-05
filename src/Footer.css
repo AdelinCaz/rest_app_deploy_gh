@@ -7,8 +7,6 @@ footer{
    width: 100%;
 }
 
-
-
 .about{
     
     flex-grow: 1;
@@ -20,42 +18,56 @@ p{
     font-size: 1rem;
     width: 30%;;
 }
+
 .social{
     
     flex-grow: 1;
     flex-basis: 70%;
     margin: 0 1rem;
 }
+
 .contact{
     
     flex-grow: 1;
     flex-basis: 100%;
 }
+
 .contact ul{
     list-style: none;
     line-height: 2rem;
 }
+
 .container li{
     padding-left: 1rem;
 }
 .container{
     display: flex; 
-    flex-direction: column;
+    margin-top: 5rem;
+    /* flex-direction: column; */
 }
+
 .container h3{
     margin-bottom: 1rem;
     font-size: 1rem;
     padding-left: 3rem;
 }
+
 .copyright{
     padding: 1rem 0;
     text-align: center;
     border-top: 1px solid grey;
 }
+
 .container svg{
     width: 2.5rem;
     height: 2.5rem;
     margin-left: 3rem;
     cursor: pointer;
+}
+
+@media (max-width: 516px) {
+    .container {
+        flex-direction: column;
+    }
 }
 

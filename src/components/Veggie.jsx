@@ -23,11 +23,21 @@ function Veggie() {
         <Wrapper>
             <h4>Veggie Picks</h4>
             <Splide options={{
-                perPage: 2,
+                perPage: 3,
                 arrows: false,
                 pagination: false,
                 drag: "free",
-                gap: "0rem"
+                gap: "1rem",
+                breakpoints: {
+                    1322: {
+                        perPage: 2,
+
+
+                    },
+                    640: {
+                        perPage: 1,
+                    }
+                }
 
             }}>
                 {
@@ -52,6 +62,11 @@ function Veggie() {
 
 const Wrapper = styled.div`
     margin: 4rem 0rem;
+    @media (max-width: 640px) {
+        h4 {
+                padding-left: 2.5rem;
+            }
+    }
     
 `;
 
@@ -67,7 +82,7 @@ const Card = styled.div`
     min-width: 10rem;
     }
     @media  (max-width: 1362px) {
-        min-height: 5rem;
+        min-height: 15rem;
     min-width: 5rem;
     }
         

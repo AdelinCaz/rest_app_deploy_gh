@@ -21,8 +21,8 @@ function Search() {
     
       <FormStyle onSubmit={submitHandler} >
         <div>
-        <FaSearch/>
-                <input onChange={(e)=> setInput(e.target.value)} type="text" value={input} />
+        
+                <input onChange={(e)=> setInput(e.target.value)} type="text" value={input} placeholder="Search.." />
         </div>
     </FormStyle>
   
@@ -52,27 +52,19 @@ const FormStyle = styled.form`
         border-radius: 0.5rem;
         outline: none;
         width: 100%;
+        
         height: 3rem;
         @media (max-width: 488px){
             font-size: 0.8rem;
             height: 2rem;
         }
     }
-
-    svg{
-        position: absolute;
-        top: 50%;
-        left: 80%;
-        transform: translate(100%, -50%);
-        color: white;
-        width: 1.5rem;
-        height: 1.5rem;
-        @media (max-width: 488px){
-        width: 1rem;
-        height: 1rem;
-        left: 7rem;;
-        }
-    }
+input::-webkit-input-placeholder {
+    font-size: 15px;
+    
+    padding-left: 10px;
+}
+    
 `;
 
 

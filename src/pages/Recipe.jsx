@@ -131,10 +131,12 @@ const DetailWrapper = styled.div`
     border-radius: 5px;
     object-fit: cover;
   }
+
   .active{
     background: linear-gradient(35deg, #494949, #313131);
     color:white;
   }
+
   h2{
     margin-bottom: 2rem;
   }
@@ -147,8 +149,6 @@ const DetailWrapper = styled.div`
   ul{
     margin-top: 2rem;
   }
-
-
 `
 const Button = styled.button`
   width: 10rem;
@@ -163,6 +163,7 @@ const Button = styled.button`
     width: 8rem;
   height: 2rem;
 }
+
   @media (max-width: 560px) {
   margin: 1rem 3rem;
   width: 8rem;
@@ -177,10 +178,12 @@ const Info = styled.div`
   .info-text-div{
     margin-right: 0px;
   }
+
   h3{
     margin-top: 5rem;
     padding: 0px;
   }
+
   .button-wrapper{
     @media( max-width: 1152px) {
     width: 100%;
@@ -196,6 +199,7 @@ const Info = styled.div`
     flex-direction: column;
     margin: 0 auto;
   }
+  
   @media (max-width: 1330px) {
     flex-direction: column;
     margin: 0 auto;
