@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <div className="container">
       <div className="container-app">
         <Nav>
           <GiKnifeFork/>
@@ -20,6 +21,7 @@ function App() {
       <Category/>
       <Pages/>
       </div>
+        </div>
       <Footer/>
       </BrowserRouter>
     </div>

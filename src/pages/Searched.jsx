@@ -27,10 +27,12 @@ function Searched() {
           {searchedRecipes ? ( searchedRecipes.map((item) => {
               return (
                   <Card key={item.idMeal}>
+                      
                       <Link to={"/recipe/" + item.idMeal}>
                       <img src={item.strMealThumb} alt="" />
                       <h4>{item.strMeal}</h4>
                       </Link>
+                      
                   </Card>
               )
           })) : <Notfound ><h3>Ingredient Not Found! :( </h3></Notfound >  }
@@ -41,12 +43,13 @@ function Searched() {
 
 
 const Grid = styled.div`
+    width: 100%;
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 3rem;
 `;
 const Card = styled.div`
-    
+    margin: 0 auto;
     img{
         width: 100%;
         border-radius: 5px;

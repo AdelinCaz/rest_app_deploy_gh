@@ -25,15 +25,19 @@ fetchDetails(name);
             <DetailWrapper >
                 <div>
                   <h2>{item.strMeal}</h2>
-                  <img src={item.strMealThumb} alt="" />
+                  <div className='img-container'>
+                    <img src={item.strMealThumb} alt="" />
+                  </div>
                 </div>  
                 <Info>
-                  <Button className={activeTab==="instructions" ? "active" : ""} onClick={()=> setActiveTab("instructions")}>
+                  <div className='button-wrapper'>
+                   <Button className={activeTab==="instructions" ? "active" : ""} onClick={()=> setActiveTab("instructions")}>
                       Instructions
-                  </Button>
-                  <Button className={activeTab === "ingredients" ? "active" : ""} onClick={()=>setActiveTab("ingredients")}>
+                   </Button>
+                   <Button className={activeTab === "ingredients" ? "active" : ""} onClick={()=>setActiveTab("ingredients")}>
                       Ingredients
-                  </Button>
+                   </Button>
+                  </div>
                   {activeTab === "instructions" && (
                   <div>
                        <h3>{item.strInstructions}</h3>
@@ -97,14 +101,27 @@ fetchDetails(name);
 }
 
 const DetailWrapper = styled.div`
+  width: 100%;
   margin-top: 10rem;
   margin-bottom: 5rem;
   display: flex;
+
+  @media (max-width: 560px) {
+    flex-direction: column;
+  }
+
+  .img-container{
+    width: 100%;
+    min-height: 20rem;
+    min-width: 15rem;
+  }
+
   img{
-    width:370px;
-    height:320px;
+    width: 100%;
+    height: 100%;
     border: 1px solid grey;
     border-radius: 5px;
+    object-fit: cover;
   }
   .active{
     background: linear-gradient(35deg, #494949, #313131);
@@ -124,15 +141,49 @@ const DetailWrapper = styled.div`
 
 `
 const Button = styled.button`
-  padding: 1rem 2rem;
+  width: 10rem;
+  height: 4rem;
   color: #313131;
   background: white;
   border: 2px solid black;
   margin-right: 2rem;
   font-weight: 600;
+  @media( max-width: 1152px) {
+    margin: 0 auto;
+    width: 8rem;
+  height: 2rem;
+}
+  @media (max-width: 560px) {
+  margin: 1rem 3rem;
+  width: 8rem;
+  height: 2rem;
+  }
 `
+  
+
 const Info = styled.div`
   margin-left: 10rem;
+  width: 100%;
+
+  .button-wrapper{
+    @media( max-width: 1152px) {
+    width: 100%;
+    margin: 0 auto;
+}
+    @media( max-width: 560px) {
+    width: 100%;
+    margin: 0 auto;
+}
+  }
+
+  @media (max-width: 560px) {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  @media (max-width: 1330px) {
+    flex-direction: column;
+    margin: 0 auto;
+  }
 `
 const UlDiv = styled.div`
   display: flex;

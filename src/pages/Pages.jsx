@@ -10,8 +10,6 @@ import Recipe from './Recipe';
 
 
 function Pages() {
-
-
   return (
     <Routes>
       <Route path="/rest_app_deploy_gh" element={<Home/>} />
@@ -21,5 +19,4 @@ function Pages() {
     </Routes>
   )
 }
-
 export default Pages

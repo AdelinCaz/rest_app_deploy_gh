@@ -24,11 +24,11 @@ function Popular() {
       <Wrapper>
           <h4>Popular Picks</h4>
           <Splide options={{
-              perPage: 4,
+              perPage: 3,
               arrows: false,
               pagination: false,
               drag: "free",
-              gap: "5rem"
+              gap: "1rem"
 
           }}>
       {
@@ -53,18 +53,29 @@ function Popular() {
 
 const Wrapper = styled.div`
     margin: 4rem 0rem;
+
     
 `;
-
+    
 const Card = styled.div`
     min-height: 20rem;
+    min-width: 15rem;
     border-radius: 5px;
     position: relative;
     border: 1px solid grey;
+
+    @media  (max-width: 1858px) {
+        min-height: 10rem;
+    min-width: 10rem;
+    }
+    @media  (max-width: 1362px) {
+        min-height: 5rem;
+    min-width: 5rem;
+    }
+        
+    
  
     img {
-    width:370px;
-    height:320px;
     border-radius: 5px;
     position: absolute;
     left: 0;

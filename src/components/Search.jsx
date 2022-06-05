@@ -31,34 +31,47 @@ function Search() {
 }
 
 const FormStyle = styled.form`
-    margin: 0rem 20rem;
+    margin: 0rem auto;
+    width: 50%;
+     @media (max-width: 488px){
+         width: 100%;
+     }
     
     
     div{
         width: 100%;
         position: relative;
-        margin-left: -25px;
     }
     input{
         border: none;
         background: linear-gradient(35DEG, #494949, #313131);
         font-size: 1.5rem;
         color: white;
-        padding: 1rem 3 rem;
+        padding: 1rem auto;
         border: none;
         border-radius: 0.5rem;
         outline: none;
         width: 100%;
-        height: 40px;
-        padding-left: 40px;
+        height: 3rem;
+        @media (max-width: 488px){
+            font-size: 0.8rem;
+            height: 2rem;
+        }
     }
 
     svg{
         position: absolute;
         top: 50%;
-        left: 0%;
+        left: 80%;
         transform: translate(100%, -50%);
         color: white;
+        width: 1.5rem;
+        height: 1.5rem;
+        @media (max-width: 488px){
+        width: 1rem;
+        height: 1rem;
+        left: 7rem;;
+        }
     }
 `;
 

@@ -13,10 +13,27 @@ code {
     monospace;
 }
 
+.App{
+  width: 100vw;
+  
+}
 
+.home-div{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container{
+  margin: 0px auto;
+  /* width: 100%; */
+  
+}
 
 .container-app{
-  margin:0px 20%;
+  margin:0px auto;
+  width: 65%;
+  align-items: center;
+  
 }
 
 h4{
